@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Solar Eclipse</title>
+  <link href="css/style.css" rel="stylesheet" />
+  <script>
+    window.console = window.console || function(t) {};
+    if (document.location.search.match(/type=embed/gi)) {
+      window.parent.postMessage("resize", "*");
+    }
+  </script>
+</head>
+<body translate="no" >
+  <div class="wrapper">
+    <div class="inner">
+      <svg height="200" width="200">
+        <mask id="moon">
+          <rect x="-200" y="0" width="600" height="200" style="fill:white;" />
+          <circle cx="100" cy="100" r="95" style="fill:black;" />
+        </mask>
+        <g id="sun-g" mask="url(#moon)">
+          <circle id="sun" cx="100" cy="100" r="100" style="fill:#DBBB34;" />
+        </g>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>
+ 
