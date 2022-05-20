@@ -1,0 +1,67 @@
+html, body { height: 100%; }
+
+body {
+  background: #3498DB;
+  -webkit-animation: sky 5s ease 1s infinite;
+          animation: sky 5s ease 1s infinite;
+}
+
+.wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.inner {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+svg #sun-g {
+  transform: translateX(200px);
+  -webkit-animation: sun-g 5s ease 1s infinite;
+          animation: sun-g 5s ease 1s infinite;
+}
+
+svg #sun {
+  transform: translateX(-200px);
+  -webkit-animation: sun 5s ease 1s infinite;
+          animation: sun 5s ease 1s infinite;
+}
+
+@-webkit-keyframes sky {
+  0% { background: #3498DB; }
+  45%,55% { background: #2C3E50; }
+  100% { background: #3498DB; }
+}
+
+@keyframes sky {
+  0% { background: #3498DB; }
+  45%,55% { background: #2C3E50; }
+  100% { background: #3498DB; }
+}
+
+@-webkit-keyframes sun-g {
+  0% { transform: translateX(200px); }
+  45%,55% { transform: translateX(0px); }
+  100% { transform: translateX(-200px); }
+}
+
+@keyframes sun-g {
+  0% { transform: translateX(200px); }
+  45%,55% { transform: translateX(0px); }
+  100% { transform: translateX(-200px); }
+}
+
+@-webkit-keyframes sun {
+  0% { transform: translateX(-200px); }
+  45%,55% { transform: translateX(0px); }
+  100% { transform: translateX(200px); }
+}
+
+@keyframes sun {
+  0% { transform: translateX(-200px); }
+  45%,55% { transform: translateX(0px); }
+  100% { transform: translateX(200px); }
+}
